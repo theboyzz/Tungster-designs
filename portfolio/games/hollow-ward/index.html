@@ -366,7 +366,7 @@ function newRun() {
   const e = pick(.6, 1, 5);
   en = { x: e.x + .5, y: e.y + .5, cx: e.x, cy: e.y, wx: e.x + .5, wy: e.y + .5, seen: false, mv: false };
   explored = Array.from({ length: N }, () => Array(N).fill(false));
-  p.x = 1.5; p.y = 1.5; p.a = 0; p.battery = 100; p.fuses = 0; p.light = true;
+  p.x = 1.5; p.y = 1.5; p.a = grid[1][2] === 0 ? 0 : Math.PI / 2; p.battery = 100; p.fuses = 0; p.light = true;
   t = 0; fieldT = 0; field = bfs(1, 1);
 }
 
